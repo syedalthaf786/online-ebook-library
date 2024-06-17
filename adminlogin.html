@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdminLogin</title>
+  <link rel="stylesheet" href="sigup1.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /* Custom styles for the footer */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    
+    }
+  </style>
+   
+</head>
+<body>
+  <h2 align="center">login</h2>
+    <form id="loginForm"  method="POST">
+      <!-- <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="enter the username" required> -->
+      <div class=form-group>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="enter the college email" pattern=".+@gmail.com" class='form-control' required>
+           </div>
+<div class=form-group>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="enter the password" class='form-control' required>
+</div class="form-btn">
+      <input type="submit" value="login" class='btn btn-primary' id="button" name='login'><br>
+      
+</div>
+</form>
+<footer class="footer">
+  <div class="container text-center">
+    <span class="text-muted"><a style="color: #00A1E1; " href="home1.html">Nmrec E-library</a>
+      &copy;2024. All Rights Reserved.
+</span>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+     document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var username = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var cusername="Althaf420@gmail.com";
+        var cpassword="123456";
+        
+        // Basic validation
+        if(username === cusername && password === cpassword) {
+          window.alert("login successfully");
+          window.location.href="admin.html";
+        // You can add further logic for authentication here
+        }
+else{
+  document.getElementById('message').innerText="incorrect email and password";
+  // alert("incorrect email and password");
+  // location.reload();
+}
+
+    });
+</script>
+</body>
+</html>
